@@ -30,6 +30,8 @@ module.exports = function(grunt) {
 
     copy: {
       bower: {
+        src: 'bower_components/vue/dist/vue.js',
+        dest: '../app/dev/js/vendor/vue.js',
       }
     },
 
