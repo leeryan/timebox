@@ -29,10 +29,14 @@ module.exports = function(grunt) {
     },
 
     copy: {
-      bower: {
-        src: 'bower_components/vue/dist/vue.js',
-        dest: '../app/dev/js/vendor/vue.js',
-      }
+        vue: {
+          src: 'bower_components/vue/dist/vue.js',
+          dest: '../app/dev/js/vendor/vue.js',
+        },
+        moment: {
+          src: 'bower_components/momentjs/moment.js',
+          dest: '../app/dev/js/vendor/moment.js',
+        }
     },
 
     watch: {
@@ -60,6 +64,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('default', ['connect', 'concurrent']);
-  grunt.registerTask('bower', ['copy:bower']);
+  grunt.registerTask('bower', ['copy']);
 
 };

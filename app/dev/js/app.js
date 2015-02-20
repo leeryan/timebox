@@ -12,8 +12,14 @@
     data: {
       newTask: '',
       tasks: [
-        {text: 'Beat vault of glass on Hard'},
-        {text: 'Catch up on emails'}
+        {
+          text: 'Beat vault of glass on Hard',
+          duration: '0:00:00'
+        },
+        {
+          text: 'Catch up on emails',
+          duration: '0:00:00'
+        }
       ]
     },
 
@@ -26,7 +32,10 @@
           return
         }
 
-        this.tasks.push({text: newTask});
+        this.tasks.push({
+          text: newTask,
+          duration: '00:00:00'
+        });
         this.newTask = '';
 
       },
@@ -37,6 +46,22 @@
 
       completeEditTask: function(task){
         task.text = task.text.trim();
+      },
+
+      startTask: function(task){
+        var startTime = moment();
+
+
+        setInterval(function(){
+
+          var elapsedTime = moment() - startTime;
+
+          var totalDuration = moment.duration(elapsedTime).seconds();
+
+          task.duration = totalDuration;
+
+        }, 1000);
+
       }
     }
 
