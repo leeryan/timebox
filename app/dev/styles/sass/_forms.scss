@@ -1,0 +1,17 @@
+/* forms
+   ========================================================================== */
+
+
+input {
+  font-family: $gothamlight-font;
+  color: $white;
+  background: $black-transparent;
+  border: none;
+  font-size: $large;
+  border-radius: 3px;
+  padding: 10px;
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,33 @@
+/* Base
+   ========================================================================== */
+
+html {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: url(../../images/background.jpg) 0px 0px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+#main {
+  margin-top: 120px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $gothamthin-font;
+  color: $white;
+}
+
+p, label{
+  font-family: $gothamlight-font;
+  color: $white;
+}

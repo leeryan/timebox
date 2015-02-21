@@ -3,25 +3,28 @@
 <head>
   <meta charset="utf-8">
   <title>Timebox</title>
+  <link rel="stylesheet" href="styles/css/main.css">
 </head>
 <body id="timebox">
   <header>
     <h1>Timebox</h1>
   </header>
-  <section id="new-task">
-    <input type="text" name="newTask" placeholder="Enter a new task" autofocus="true" autocomplete="off" v-model="newTask" v-on="keyup:addTask | key enter">
-  </section>
-  <section id="task-list">
-    <ul>
-      <li v-repeat="tasks">
-        <label>{{text}}</label>
-        <input type="text" name="newTask" placeholder="{{text}}" autocomplete="off" v-model="text" v-on="blur: completeEditTask(this)">
-        <button type="button" v-on="click: deleteTask(this)">delete</button>
-        <button type="button" v-on="click: startTask(this)">start</button>
-        <p>{{duration}}</p>
-      </li>
-    </ul>
-  </section>
+  <div id="main">
+    <section id="new-task">
+      <input type="text" name="newTask" placeholder="Start a new task" autofocus="true" autocomplete="off" v-model="newTask" v-on="keyup:addTask | key enter">
+    </section>
+    <section id="task-list">
+      <ul>
+        <li v-repeat="tasks">
+          <label>{{text}}</label>
+          <input type="text" name="newTask" placeholder="{{text}}" autocomplete="off" v-model="text" v-on="blur: completeEditTask(this)">
+          <button type="button" v-on="click: deleteTask(this)">delete</button>
+          <button type="button" v-on="click: startTask(this)">start</button>
+          <p>{{duration}}</p>
+        </li>
+      </ul>
+    </section>
+  </div>
 
   <script src="/js/vendor/moment.js" type="text/javascript"></script>
   <script src="/js/vendor/vue.js" type="text/javascript"></script>
