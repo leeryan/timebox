@@ -1,0 +1,16 @@
+/* Header
+   ========================================================================== */
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-family: $gothamthin-font;
+  font-size: $x-large;
+  color: $white;
+}
